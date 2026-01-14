@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "radium"
+version = "0.1.0"
+description = "A Python-based compiled language inspired by Kotlin."
+authors = [
+    { name = "RavinVT", email = "ravinvtuber@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+[project.scripts]
+radium = "radium.__main__:complete_call"
+
+[tool.setuptools]
+packages = ["radium", "radium.lib"]
