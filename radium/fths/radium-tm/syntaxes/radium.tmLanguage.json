@@ -1,0 +1,67 @@
+{
+  "name": "Radium",
+  "scopeName": "source.radium",
+  "fileTypes": ["rad"],
+  "patterns": [
+    {
+      "match": "\\b(class|fun|val|var|print)\\b",
+      "name": "keyword.control.radium"
+    },
+    {
+      "match": "\\b[A-Z][A-Za-z0-9_]*\\b",
+      "name": "entity.name.type.radium"
+    },
+    {
+      "match": "\\bfun\\s+([a-zA-Z_][a-zA-Z0-9_]*)\\b",
+      "captures": {
+        "1": { "name": "entity.name.function.radium" }
+      }
+    },
+    {
+      "match": "\\b(val|var)\\s+([a-zA-Z_][a-zA-Z0-9_]*)\\b",
+      "captures": {
+        "2": { "name": "variable.other.radium" }
+      }
+    },
+    {
+      "match": "\\b\\d+\\b",
+      "name": "constant.numeric.radium"
+    },
+    {
+      "begin": "\"",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.string.begin.radium" }
+      },
+      "end": "\"",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.string.end.radium" }
+      },
+      "name": "string.quoted.double.radium",
+      "patterns": [
+        {
+          "match": "\\\\.",
+          "name": "constant.character.escape.radium"
+        }
+      ]
+    },
+    {
+      "match": "//.*$",
+      "name": "comment.line.double-slash.radium"
+    },
+    {
+      "begin": "/\\*",
+      "beginCaptures": { "0": { "name": "comment.block.radium" } },
+      "end": "\\*/",
+      "endCaptures": { "0": { "name": "comment.block.radium" } },
+      "name": "comment.block.radium"
+    },
+    {
+      "match": "[+\\-*/=]",
+      "name": "keyword.operator.radium"
+    },
+    {
+      "match": "[(){}:,\\.]",
+      "name": "punctuation.radium"
+    }
+  ]
+}
