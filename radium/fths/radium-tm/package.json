@@ -1,0 +1,24 @@
+{
+  "name": "Radium",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "radium",
+        "aliases": ["Radium"],
+        "extensions": [".rad"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "radium",
+        "scopeName": "source.radium",
+        "path": "./syntaxes/radium.tmLanguage.json"
+      }
+    ]
+  }
+}
